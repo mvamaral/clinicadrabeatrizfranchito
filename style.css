@@ -1,0 +1,1104 @@
+:root {
+  --cor-texto: #303030;
+  --cor-customized: #5e8c83;
+  --cor-customized-hover: #4c7269;
+  --primary: #7e5217;
+  --dark: #1a1a1a;
+  --light: #fdfbf7;
+  --cor-brown: #7e5217;
+
+  /* custom-button  */
+  --oval: 3rem;
+  --top-left-bottom-right: 2.5rem 0.5rem;
+  --top-right-bottom-left: 0.5rem 2.5rem;
+  --cantos-suaves: 1rem;
+}
+
+.flex {
+  display: flex;
+
+  &.col {
+    flex-flow: column;
+
+    &.wrap {
+      flex-flow: column wrap;
+    }
+  }
+
+  &.wrap {
+    flex-flow: row wrap;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Montserrat, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: var(--cor-texto);
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3.32rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.76rem;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2.3rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h4,
+p,
+li {
+  font-size: 1.92rem;
+  line-height: 1.3;
+}
+
+h5 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+h4,
+h5 {
+  font-weight: 500;
+}
+
+span {
+  font-weight: 600;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  text-decoration-color: inherit;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+svg {
+  width: 4rem;
+  color: inherit;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  scroll-margin-top: 14rem;
+}
+
+.container {
+  max-width: 100rem;
+}
+
+.button {
+  background-color: var(--cor-customized);
+  color: white;
+  padding: 1.02rem 2.5rem;
+  border-radius: 2.5rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.18);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button {
+  font-weight: 600;
+  border-radius: var(--top-left-bottom-right);
+  background-image: linear-gradient(180deg, var(--cor-customized));
+  transition: transform 200ms;
+
+  &:hover {
+    background-image: linear-gradient(180deg, var(--cor-customized-hover));
+    transform: scale(1.02);
+  }
+}
+
+h2 {
+  letter-spacing: 1.5px;
+  z-index: 9;
+  color: var(--cor-customized);
+}
+
+.h1-title {
+  padding-bottom: 1rem;
+  width: max-content;
+  font-size: 5.73rem;
+  letter-spacing: 1.5px;
+  z-index: 9;
+  color: var(--cor-customized);
+
+  &.underline {
+    text-decoration: none;
+    display: inline-block;
+    background-image: linear-gradient(
+      var(--cor-customized),
+      var(--cor-customized)
+    );
+    background-position: bottom left;
+    background-size: 100% 5px;
+    background-repeat: no-repeat;
+  }
+}
+
+/* CABEÇALHO */
+header {
+  transform: translateY(-100%);
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+  left: 0;
+  gap: 3.12rem;
+  width: 100%;
+  padding: 1.6rem;
+  background-color: rgba(255, 255, 255, 75%);
+  backdrop-filter: blur(30px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  box-shadow: 0 0.21rem 0.4rem rgb(0, 0, 0, 0.1);
+
+  & img {
+    width: 10rem;
+  }
+
+  & nav {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      white-space: nowrap;
+      transition: all ease-in 300ms;
+
+      &:hover {
+        color: var(--cor-customized);
+      }
+    }
+
+    & a::after {
+      display: block;
+      justify-self: center;
+      content: "";
+      width: 50%;
+      height: 0.2rem;
+      transition: all ease-in 300ms;
+      background: var(--cor-customized);
+      opacity: 0;
+    }
+
+    & a:hover:after {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  .box-social {
+    display: flex;
+    gap: 1.28rem;
+    font-size: 18px;
+    margin-left: 10px;
+
+    & svg {
+      width: 2.5rem;
+      transition: all ease-in 300ms;
+
+      &:hover {
+        color: var(--cor-customized);
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+/* APRESENTAÇÃO */
+#video-container {
+  display: block;
+  position: relative;
+  width: 99vw;
+  height: 100vh;
+  z-index: 20;
+
+  & .scene {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 1.5s ease-in-out,
+      visibility 1.5s;
+  }
+
+  & .scene.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  & .scene img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 15s linear;
+    z-index: 1;
+  }
+
+  & .scene.active img {
+    transform: scale(1.15);
+  }
+
+  & .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+    z-index: 2;
+  }
+
+  & .scene-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 80rem;
+    padding: 2.1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.5s ease-out 0.5s;
+  }
+
+  & .scene.active .scene-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  & h2 {
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 3.98rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 1);
+  }
+
+  & p {
+    font-weight: 300;
+    line-height: 1.6;
+    text-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+
+  & .scene-6 .scene-content {
+    background: rgba(255, 255, 255, 0);
+    padding: 4rem;
+    border-radius: 2rem;
+    max-width: 60rem;
+  }
+
+  & .scene-6 h2 {
+    color: var(--light);
+    text-shadow: none;
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+  }
+
+  & .scene-6 p {
+    color: var(--light);
+    text-shadow: none;
+    font-size: 1.92rem;
+  }
+
+  & .scene-6 img.logo {
+    position: relative;
+    width: 25rem;
+    height: auto;
+    transform: none;
+    transition: none;
+    margin: 0 auto;
+    z-index: 4;
+  }
+
+  & .progress-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 10;
+
+    & .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: var(--primary);
+      transition: width 0.1s linear;
+    }
+  }
+
+  & .controls {
+    position: absolute;
+    display: flex;
+    bottom: 3rem;
+    right: 3rem;
+    gap: 1.6rem;
+    z-index: 20;
+
+    & .control-btn {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 0.1rem solid rgba(255, 255, 255, 0.3);
+      color: white;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: var(--primary);
+        border-color: var(--primary);
+      }
+    }
+  }
+
+  & .fixed-bottom-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 8rem;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+  }
+}
+
+/* CLINICA */
+.section-clinica {
+  position: relative;
+  background-size: cover;
+  background-position: 50%;
+  padding: 6.1rem 0;
+}
+
+.container-clinica {
+  display: flex;
+  align-items: center;
+
+  & .carrossel-clinica {
+    align-items: center;
+    display: flex;
+    flex: 2;
+
+    .button-clinica {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--cor-customized);
+      color: white;
+      border-radius: 0.5rem;
+      width: 8rem;
+      height: 3rem;
+      font-weight: 700;
+      z-index: 1;
+      top: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
+      transition: all 0.3s;
+
+      &.left {
+        z-index: 9;
+        transform: translate(-7rem, -50%);
+      }
+
+      &.right {
+        z-index: 9;
+        transform: translate(7rem, -50%);
+      }
+
+      &:hover {
+        background-color: white;
+        color: var(--cor-customized);
+        box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    & .img-clinica {
+      display: flex;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(1px);
+      }
+    }
+
+    & .principal {
+      width: 100%;
+      border-top-left-radius: 5.5rem;
+      z-index: 9;
+      box-shadow: 0 0 1rem 0.5px rgba(0, 0, 0, 0.7);
+      &::before {
+        content: none;
+      }
+    }
+
+    & .next {
+      width: 70%;
+      z-index: 8;
+
+      &.left {
+        transform: translateX(20%);
+        border-top-left-radius: 5.5rem;
+      }
+
+      &.right {
+        transform: translateX(-20%);
+        border-top-right-radius: 5.5rem;
+
+        &.end {
+          width: 50%;
+          z-index: 7;
+          transform: translateX(-40%);
+        }
+      }
+    }
+  }
+
+  .box-text {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    gap: 3rem;
+    transform: translate(-20%);
+    z-index: 9;
+
+    & h1 {
+      display: flex;
+      position: relative;
+      letter-spacing: 1.5px;
+      z-index: 9;
+      font-size: 5.73rem;
+      color: var(--cor-customized);
+
+      &::after {
+        transform: translateY(1rem);
+        position: absolute;
+        align-self: end;
+        content: "";
+        height: 0.5rem;
+        width: 100%;
+        background-color: var(--cor-customized);
+      }
+    }
+
+    & .text-clinica {
+      color: white;
+      padding: 3rem;
+      background-color: #7e5217;
+      box-shadow: 0 0 1rem 0.5px rgba(0, 0, 0, 0.7);
+      border-top-right-radius: 5.5rem;
+      z-index: 9;
+    }
+  }
+}
+
+/* DRA. BEATRIZ */
+.section-dra-beatriz {
+  box-shadow: inset 0 4px 12px rgba(43, 43, 43, 0.1);
+  padding: 6.1rem;
+  padding-bottom: 9.54rem;
+  background-image: url("image/doutora-background.png");
+  background-position: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  & .container-dra-beatriz {
+    justify-content: center;
+    padding-top: 3.12rem;
+  }
+
+  & h2 {
+    color: #7e5217;
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  & .content-dra-beatriz {
+    & .text-dra-beatriz {
+      flex: 2;
+      & .box-dra {
+        display: flex;
+        flex-flow: column;
+        gap: 2.5rem;
+
+        & ul {
+          list-style: inside;
+        }
+      }
+    }
+
+    & .space-div {
+      flex: 2;
+    }
+  }
+}
+
+/* DERMATOLOGIA */
+.section-dermatologia {
+  position: relative;
+  padding: 6.1rem;
+  gap: 3.12rem;
+
+  &::before,
+  &::after {
+    opacity: 0;
+  }
+
+  & h2 {
+    text-transform: uppercase;
+    font-size-adjust: 0.3;
+  }
+
+  & .box-text {
+    border-radius: var(--top-left-bottom-right);
+    background-color: #7e5217;
+
+    & p {
+      color: white;
+      font-style: italic;
+    }
+  }
+
+  & .img-dermatologia {
+    width: 70rem;
+    height: 40rem;
+    border-radius: var(--top-right-bottom-left);
+    background-image: url("dermatologia-e-a-funcao-desta-importante-area-da-medicina-03042019102035.png");
+  }
+
+  & .box-text {
+    padding: 2.5rem;
+    width: 45rem;
+    height: 25rem;
+  }
+}
+
+/* PROCEDIMENTOS*/
+.section-procedimentos {
+  padding: 6.1rem 0;
+  & .container-injetaveis,
+  & .container-tratamento {
+    justify-content: center;
+    padding: 3.9rem 6.1rem;
+    background-color: #86b8a9;
+  }
+
+  & .container-cirurgia {
+    justify-content: center;
+    background-color: #f4f9f8;
+    padding: 3.9rem 6.1rem;
+  }
+
+  & .h1-title-procedimentos {
+    padding-left: 6.1rem;
+    padding-bottom: 3.12rem;
+  }
+}
+
+.injetaveis,
+.container-cards,
+.content-procedimentos {
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.title-procedimentos {
+  & h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+  }
+
+  & h3 {
+    font-size-adjust: 0.5;
+    font-style: italic;
+    color: #7e5217;
+  }
+}
+
+.procedimentos-card {
+  display: flex;
+  flex-flow: column;
+  gap: 1.02rem;
+  border-left: transparent solid 0.5rem;
+  border-right: white solid 0.5rem;
+  background-color: white;
+  border-radius: var(--top-right-bottom-left);
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(43, 43, 43, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  & h4 {
+    color: #3a564f;
+    font-size-adjust: 0.5;
+    /* text-transform: uppercase; */
+    font-weight: 600;
+  }
+
+  &:hover {
+    border-left-color: #7e5217;
+    border-right-color: transparent;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.procedimentos-card:hover h4 {
+  color: #7e5217;
+}
+
+/* INJETÁVEIS */
+.injetaveis-card {
+  position: relative;
+  width: 35rem;
+  height: 45rem;
+  border-radius: 1.5rem;
+  background-color: black;
+  overflow: hidden;
+  cursor: pointer;
+
+  & .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease;
+  }
+
+  & .card-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.1rem;
+    color: white;
+    z-index: 2;
+
+    & h3 {
+      font-size: 2.76rem;
+      text-transform: uppercase;
+      font-size-adjust: 0.3;
+    }
+
+    & .card-title {
+      margin: 0;
+      transform: translateY(60px);
+      transition: transform 0.4s ease;
+    }
+
+    & .card-text {
+      font-size-adjust: 0.4;
+      margin-top: 1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      transform: translateY(200px);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    z-index: 1;
+  }
+}
+
+.injetaveis-card:hover .card-img {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.injetaveis-card:hover .card-title {
+  transform: translateY(0);
+}
+
+.injetaveis-card:hover .card-text {
+  opacity: 1;
+  transition-delay: 0.2s;
+  transform: translateY(0);
+}
+
+/* CIRUGIA DERMATOLÓGICA */
+.container-cirurgia {
+  gap: 3.9rem;
+
+  & h2 {
+    color: var(--cor-customized);
+  }
+}
+
+.cirurgia-img {
+  overflow: hidden;
+  border-radius: var(--top-right-bottom-left);
+}
+
+/* TRATAMENTOS CAPILARES */
+.container-tratamento {
+  display: flex;
+  gap: 3.9rem;
+
+  & .content-procedimentos {
+    flex: 1;
+  }
+}
+
+/* CARROSSEL TRATAMENTOS */
+.content-carrossel {
+  align-items: center;
+  flex: 1;
+}
+
+.carrossel-tratamento {
+  flex: 1;
+  position: relative;
+  border-radius: var(--top-right-bottom-left);
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18);
+}
+
+.container-carrossel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.all-img-tratamento {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.77, 0, 0.18, 1);
+  will-change: transform;
+}
+
+.img-tratamento {
+  min-width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.button-tratamento {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: var(--cor-customized);
+  border: none;
+  color: white;
+  width: 3rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.15);
+
+  &.left {
+    left: 1rem;
+  }
+  &.right {
+    right: 1rem;
+  }
+
+  &:hover {
+    background-color: white;
+    color: var(--cor-customized);
+    /* transform: translateY(-50%) scale(1.1); */
+  }
+}
+
+.dots-tratamento {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.6rem;
+  z-index: 10;
+}
+
+.dot-tratamento {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    background 0.3s,
+    width 0.3s,
+    border-radius 0.3s;
+
+  &.ativo {
+    background: white;
+    width: 2.4rem;
+    border-radius: 0.4rem;
+  }
+}
+/* TECNOLOGIAS */
+.section-tecnologias {
+  flex-flow: column;
+  padding: 6.1rem;
+  gap: 3.9rem;
+
+  & h1 {
+    padding-bottom: 3.12rem;
+  }
+}
+
+.container-tecnologias {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.box-tec {
+  padding: 1.02rem;
+  text-align: center;
+  /* border: solid #303030 0.1rem; */
+  box-shadow: inset 0 4px 12px rgba(43, 43, 43, 0.1);
+  position: relative;
+  width: 360px;
+  height: 400px;
+  background-color: white;
+  overflow: hidden;
+  cursor: pointer;
+
+  & img {
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  & .box-text-tec {
+    padding-bottom: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    & h2 {
+      color: #7e5217;
+      font-weight: 600;
+      transition: transform 0.4s ease;
+      transform: translateY(120px);
+    }
+
+    & P {
+      color: #7e5217;
+      transition: opacity 0.3s ease;
+      margin-top: 10px;
+      opacity: 0;
+    }
+  }
+}
+
+.box-tec:hover img {
+  filter: blur(4px);
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.box-tec:hover h2 {
+  transform: translateY(0);
+}
+
+.box-tec:hover p {
+  transition-delay: 0.2s;
+  opacity: 1;
+}
+
+.box-tec::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.8));
+  z-index: 1;
+}
+
+/* RODAPÉ */
+footer {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4.2rem;
+  padding: 5rem 6rem;
+  background-color: #4c7269;
+
+  & .logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 14rem;
+
+    & img {
+      width: 100%;
+    }
+    & span {
+      white-space: nowrap;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+  }
+
+  & .contatos {
+    gap: 2rem;
+
+    & > span {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
+
+  & .localizacao {
+    gap: 2.7rem;
+    min-width: 28rem;
+
+    & strong {
+      font-size: 1.6rem;
+    }
+    & span {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.a-contatos {
+  align-items: center;
+  gap: 2rem;
+
+  & span {
+    font-size: 1.4rem;
+  }
+}
+
+.a-contatos:hover {
+  color: #7e5217;
+}
+
+.strong-developer {
+  color: #ff2f01;
+  font-weight: 400;
+}
+
+.footer-copy {
+  text-align: center;
+  background-color: #3a564f;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem;
+  & p {
+    font-size: 1.6rem;
+  }
+}
+
+.whatsapp {
+  width: 8.5rem;
+  position: fixed;
+  right: 1rem;
+  bottom: 0;
+  transform: translateX(-15%);
+  transform: translateY(110%);
+  transition: all ease-in 200ms;
+  z-index: 10;
+
+  &.whatsapp-hidden {
+    animation: scrollMove linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+  }
+}
+
+.whatsapp:hover,
+.whatsapp:active {
+  transform: translate(-12.5%, -12.5%);
+}
+
+@keyframes scrollMove {
+  to {
+    transform: translateY(-15px);
+  }
+}

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Bloquear arquivos de configuração e ocultos
+Disallow: /.htaccess
+Disallow: /.git/
+Disallow: /js/
+
+Sitemap: https://www.clinicabiafranchito.com.br/sitemap.xml
