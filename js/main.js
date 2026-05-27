@@ -81,52 +81,6 @@ function initSlideshow() {
 }
 
 /* ============================================================
-   CARROSSEL CLÍNICA
-   Layout decorativo com 4 posições fixas.
-   Ao clicar, apenas as imagens (src) rotacionam.
-   ============================================================ */
-function initCarrosselClinica() {
-  const btnLeft = document.querySelector(".button-clinica.left");
-  const btnRight = document.querySelector(".button-clinica.right");
-  const imgEls = [
-    document.querySelector(".img-clinica-0 img"),
-    document.querySelector(".img-clinica-1 img"),
-    document.querySelector(".img-clinica-2 img"),
-    document.querySelector(".img-clinica-3 img"),
-  ];
-
-  if (!btnLeft || !btnRight || imgEls.some((el) => !el)) return;
-
-  /* Pool de fotos da clínica — adicione mais arquivos conforme disponível */
-  const pool = ["Clinica.png", "Clinica.png", "Clinica.png", "Clinica.png"];
-
-  let start = 0;
-
-  function render() {
-    imgEls.forEach((img, i) => {
-      const next = pool[(start + i) % pool.length];
-      if (img.src.endsWith(next)) return; // sem reload desnecessário
-      img.style.opacity = "0";
-      img.style.transition = "opacity 0.4s ease";
-      setTimeout(() => {
-        img.src = next;
-        img.style.opacity = "1";
-      }, 200);
-    });
-  }
-
-  btnLeft.addEventListener("click", () => {
-    start = (start - 1 + pool.length) % pool.length;
-    render();
-  });
-
-  btnRight.addEventListener("click", () => {
-    start = (start + 1) % pool.length;
-    render();
-  });
-}
-
-/* ============================================================
    CARROSSEL TRATAMENTOS CAPILARES
    Slide clássico com translateX + dots.
    ============================================================ */
@@ -222,7 +176,6 @@ function initSmoothScroll() {
    ============================================================ */
 document.addEventListener("DOMContentLoaded", () => {
   initSlideshow();
-  initCarrosselClinica();
   initCarrosselTratamento();
   initHeaderScroll();
   initSmoothScroll();
