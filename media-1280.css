@@ -1,0 +1,6 @@
+@media all and (max-width: 80em) {
+  header {
+    justify-content: center;
+    gap: 2.5rem;
+  }
+}

@@ -7,8 +7,21 @@
   <meta name="description" content="Clínica de Dermatologia Dra. Beatriz Franchito em Assis-SP. Procedimentos injetáveis, cirurgia dermatológica, tratamentos capilares e tecnologias avançadas para sua saúde e beleza." />
   <meta name="robots" content="index, follow" />
   <title>Clínica de Dermatologia – Dra. Beatriz Franchito</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- prioridade no carregamento do CSS para evitar FOUC (Flash of Unstyled Content/ Flash de conteúdo sem estilo)
+  <link rel="preload" href="main.css" as="style"/>
+  -->
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="media-1920.css" media="(max-width: 1920px)" />
+  <link rel="stylesheet" href="media-1366.css" media="(max-width: 1366px)" />
+  <link rel="stylesheet" href="media-1280.css" media="(max-width: 1280px)" />
+  <link rel="stylesheet" href="media-1200.css" media="(max-width: 1200px)" />
+  <link rel="stylesheet" href="media-991.css" media="(max-width: 991px)" />
+  <link rel="stylesheet" href="media-850.css" media="(max-width: 850px)" />
+  <link rel="stylesheet" href="media-767.css" media="(max-width: 767px)" />
+  <link rel="stylesheet" href="media-480.css" media="(max-width: 480px)" />
   <script defer src="js/carousel.js"></script>
   <noscript><style>.js-only{display:none!important}</style></noscript>
 </head>
@@ -16,16 +29,18 @@
 <body>   
   <header>
     <div><a href="#inicio"><img alt="Logo Clínica Beatriz Franchito" src="image/logo.png" /></a></div>
-    <nav>
-      <a href="#inicio">Home</a>
-      <a href="#clinica">Clínica</a>
-      <a href="#dra-beatriz">Dra. Beatriz Franchito</a>
-      <a href="#procedimentos">Procedimentos</a>
-      <a href="#tecnologias">Tecnologias</a>
-    </nav>
-    <div class="button button-contato">
-      <a href="https://api.whatsapp.com/send/?phone=5518991501965&text=Quero+agendar+minha+avalia%C3%A7%C3%A3o&type=phone_number&app_absent=0"
-                target="_blank" rel="noopener noreferrer"><span>Entrar em Contato</span></a>
+    <div class="flex header-divider">
+      <nav>
+        <a href="#inicio">Home</a>
+        <a href="#clinica">Clínica</a>
+        <a href="#dra-beatriz">Dra. Beatriz Franchito</a>
+        <a href="#procedimentos">Procedimentos</a>
+        <a href="#tecnologias">Tecnologias</a>
+      </nav>
+      <div class="button button-contato">
+        <a href="https://api.whatsapp.com/send/?phone=5518991501965&text=Olá%2C%20gostaria%20de%20agendar+minha+avalia%C3%A7%C3%A3o&type=phone_number&app_absent=0"
+                  target="_blank" rel="noopener noreferrer"><span>Entrar em Contato</span></a>
+      </div>
     </div>
     <div class="box-social">
       <a href="https://www.instagram.com/drabiafranchito/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="social-instagram"
@@ -133,7 +148,7 @@
 
     <div class="fixed-bottom-container">
       <div class="button button-agendar">
-        <span><a href="https://api.whatsapp.com/send/?phone=5518991501965&text=Quero+agendar+minha+avalia%C3%A7%C3%A3o&type=phone_number&app_absent=0"
+        <span><a href="https://api.whatsapp.com/send/?phone=5518991501965&text=Olá%2C%20gostaria%20de%20agendar+minha+avalia%C3%A7%C3%A3o&type=phone_number&app_absent=0"
                 target="_blank" rel="noopener noreferrer">QUERO AGENDAR MINHA AVALIAÇÃO</a></span>
       </div>
     </div>
@@ -149,7 +164,6 @@
   </div>
   
   <main>
-    
     <!-- Clinica -->
     <section id="clinica" class="flex section section-clinica">
       <div class="container-clinica">
@@ -173,31 +187,31 @@
     <section id="dra-beatriz" class="flex col section section-dra-beatriz">
       <h1 class="h1-title underline">Dra. Beatriz Franchito</h1>
       <div class="flex container-dra-beatriz">
-      <div class="container">
-        <div class="flex content-dra-beatriz">
-          <div class="text-dra-beatriz">
-            <span>CRM 121.398 | RQE 33.837</span>
-            <h2>
-              "O que me motiva é proporcionar melhoras na qualidade de vida dos
-              pacientes. Às vezes pequenas mudanças fazem toda a diferença”
-            </h2>
-            <p>
-              Dra. Beatriz Franchito iniciou sua jornada na área em 2006, no
-              Hospital de Base de São José do Rio Preto. Em 2009, tornou-se membro
-              titular da Sociedade Brasileira de Dermatologia atuando desde então.
-              Com formação ou cursos especificos anos, atende com um enfoque
-              humanizado, valorizando o diagnóstico preciso e individualizado.
-            </p>
-            <ul>
-              <li>Formação em Dermatologia Clínica</li>
-              <li>Dermatologia Estética</li>
-              <li>Dermatologia Cirúrgica</li>
-            </ul>
-          </div>
+        <div class="container">
+          <div class="flex content-dra-beatriz">
+            <div class="text-dra-beatriz">
+              <span>CRM 121.398 | RQE 33.837</span>
+              <h2>
+                "O que me motiva é proporcionar melhoras na qualidade de vida dos
+                pacientes. Às vezes pequenas mudanças fazem toda a diferença”
+              </h2>
+              <p>
+                Dra. Beatriz Franchito iniciou sua jornada na área em 2006, no
+                Hospital de Base de São José do Rio Preto. Em 2009, tornou-se membro
+                titular da Sociedade Brasileira de Dermatologia atuando desde então.
+                Com formação ou cursos especificos anos, atende com um enfoque
+                humanizado, valorizando o diagnóstico preciso e individualizado.
+              </p>
+              <ul>
+                <li>Formação em Dermatologia Clínica</li>
+                <li>Dermatologia Estética</li>
+                <li>Dermatologia Cirúrgica</li>
+              </ul>
+            </div>
 
-          <div class="space-div"></div>
+            <div class="space-div"></div>
+          </div>
         </div>
-      </div>
       </div>
     </section>
 
@@ -243,6 +257,7 @@
                 src="image/harmonizacao-depois.png"
                 alt="Harmonização Facial"
                 class="card-img"
+                loading="lazy"
               />
               <div class="card-box">
                 <h3 class="card-title">Procedimentos com <br>Ácido Hialurônico</h3>
@@ -258,6 +273,7 @@
                 src="image/toxina-botulinica.jpg"
                 alt="Toxina Botulínica"
                 class="card-img"
+                loading="lazy"
               />
 
               <div class="card-box">
@@ -274,6 +290,7 @@
                 src="image/bioestimuladores-colageno.png"
                 alt="Bioestimuladores"
                 class="card-img"
+                loading="lazy"
               />
               <div class="card-box">
                 <h3 class="card-title">Bioestimuladores</h3>
@@ -285,24 +302,35 @@
             </div>
           </div>
         </div>
-      </div> 
+      </div>
+      
+      <div class="section-bottom-svg">
+			  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+	        <path class="elementor-shape-fill" d="M500,98.9L0,6.1V0h1000v6.1L500,98.9z"></path>
+        </svg>		
+      </div>      
 
-      <div class="flex container-cirurgia">  
+      <div class="grid cols-2 container-cirurgia">  
         <div class="cirurgia-img">
-          <img src="image/cirurgia.jpeg" alt="Cirurgia Dermatológica">
+          <img src="image/cirurgia.png" alt="Cirurgia Dermatológica" loading="lazy" />
         </div>
         
-        <div class="flex col content-procedimentos">
-          <div class="title-procedimentos">
-            <h2>Cirurgia Dermatológica</h2>
-            <h3>Diagnóstico preciso e tratamentos seguros para a saúde da pele</h3>
-          </div>
+        <div class="flex col title-procedimentos">
+          <h2>Cirurgia Dermatológica</h2>
+          <h3>Diagnóstico preciso e tratamentos seguros para a saúde da pele</h3>
+        </div>
+
+        <div class="flex col text-cirugia">
           <p>
             A cirurgia dermatológica é essencial para o diagnóstico e tratamento de diversas condições da pele, incluindo lesões suspeitas e tumores cutâneos.
           </p>
+
           <p>
             Os procedimentos são realizados com técnicas modernas e minimamente invasivas, priorizando segurança, precisão e conforto para o paciente.
           </p>
+        </div>
+
+        <div class="flex col card-cirurgia">
           <div class="procedimentos-card">
             <h4>Biópsias de Pele</h4>
             <p>
@@ -319,48 +347,63 @@
         </div>
       </div>
 
-      <div class="container-tratamento">
-        <div class="flex col content-procedimentos">
-          <div class="title-procedimentos">
-            <h2>Tratamentos Capilares</h2>
-            <h3>Tecnologia avançada para saúde do couro cabeludo e dos fios</h3>
-          </div>
+      <div class="section-bottom-svg">
+			  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+	        <path class="elementor-shape-fill" d="M500,98.9L0,6.1V0h1000v6.1L500,98.9z"></path>
+        </svg>		
+      </div>
 
+      <div class="flex col container-capilares">
+        <div class="title-procedimentos">
+          <h2>Tratamentos Capilares</h2>
+          <h3>Tecnologia avançada para saúde do couro cabeludo e dos fios</h3>
+        </div>
+
+        <div class="flex col text-capilares">
           <p>A saúde capilar depende de um couro cabeludo equilibrado e de tratamentos específicos para cada tipo de queda ou fragilidade dos fios.</p>
-          
+            
           <p>A clínica utiliza tecnologias modernas e protocolos personalizados baseados em mesoterapia capilar, promovendo fortalecimento, crescimento e recuperação da vitalidade dos cabelos.</p>
-          
-          <div class="procedimentos-card">
-            <h4>Mesoterapia Capilar</h4>
-            <p>
-              A mesoterapia capilar consiste na aplicação de ativos diretamente no couro cabeludo, estimulando os folículos e fortalecendo os fios.
-            </p>
-          </div>
-
-          <div class="procedimentos-card">
-            <h4>Protocolos Capilares Personalizados</h4>
-            <p>
-              Cada paciente recebe um protocolo exclusivo baseado na análise do couro cabeludo e da saúde capilar.
-            </p>
-          </div>
         </div>  
+        
 
-        <div class="flex content-carrossel">
-          <div class="carrossel-tratamento">
+        <div class="flex content-capilares">
+          <div class="flex col content-cards">
+            <div class="procedimentos-card">
+              <h4>Mesoterapia Capilar</h4>
+              <p>
+                A mesoterapia capilar consiste na aplicação de ativos diretamente no couro cabeludo, estimulando os folículos e fortalecendo os fios.
+              </p>
+            </div>
+
+            <div class="procedimentos-card">
+              <h4>Protocolos Capilares Personalizados</h4>
+              <p>
+                Cada paciente recebe um protocolo exclusivo baseado na análise do couro cabeludo e da saúde capilar.
+              </p>
+            </div>
+          </div>  
+
+          <div class="flex col carrossel-tratamento">
             <button class="button-tratamento left">&#10094;</button>
             <button class="button-tratamento right">&#10095;</button>
-            <div class="container-carrossel">
-              <div class="all-img-tratamento">
-                <div class="img-tratamento"><img src="image/tratamento-capilar-3.webp" alt="Tratamento Capilar"  /><!--dentro tag loading="lazy"carregamento ao rolar pagina--></div>
-                <div class="img-tratamento"><img src="image/tratamento-capilar-2.jpg" alt="Tratamento Capilar"  /><!--dentro tag loading="lazy"carregamento ao rolar pagina--></div>
-                <div class="img-tratamento"><img src="image/tratamento-capilar-1.jpg" alt="Tratamento Capilar"  /><!--dentro tag loading="lazy"carregamento ao rolar pagina--></div>
+            <div class="flex container-carrossel">
+              <div class="flex all-img-tratamento">
+                <div class="img-tratamento"><img src="image/tratamento-capilar-3.webp" alt="Tratamento Capilar" loading="lazy" /></div>
+                <div class="img-tratamento"><img src="image/tratamento-capilar-2.jpg" alt="Tratamento Capilar" loading="lazy" /></div>
+                <div class="img-tratamento"><img src="image/tratamento-capilar-1.jpg" alt="Tratamento Capilar" loading="lazy" /></div>
               </div>
             </div>
             <div class="dots-tratamento"></div>
           </div>
         </div>
       </div>
-    </div>
+
+      </div>
+          <div class="section-bottom-svg">
+        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <path class="elementor-shape-fill" d="M500,98.9L0,6.1V0h1000v6.1L500,98.9z"></path>
+        </svg>		
+      </div>
     </section>
 
     <!-- Tecnologias -->
@@ -373,7 +416,7 @@
         </div>
         <div class="flex container-tecnologias">
           <div class="box-tec">
-            <img src="image/etherea-tecnologia.png" alt="ethera" class="image-tec" />
+            <img src="image/etherea-tecnologia.png" alt="ethera" class="image-tec" loading="lazy" />
             <div class="box-text-tec">
               <h2>Éterea</h2>
             
@@ -391,7 +434,7 @@
           </div>
           
           <div class="box-tec">
-            <img src="image/liftera-tecnologia.jpg" alt="liftera" class="image-tec" />
+            <img src="image/liftera-tecnologia.jpg" alt="liftera" class="image-tec" loading="lazy" />
             <div class="box-text-tec">
               <h2>Liftera</h2>
             
@@ -406,7 +449,7 @@
           </div>
           
           <div class="box-tec">
-            <img src="image/laser-de-co2-tecnologia.png" alt="laser-de-co2" class="image-tec" />
+            <img src="image/laser-de-co2-tecnologia.png" alt="laser-de-co2" class="image-tec" loading="lazy" />
             <div class="box-text-tec">
               <h2>Laser de CO2</h2>
             
@@ -421,7 +464,7 @@
           </div>
           
           <div class="box-tec">
-            <img src="image/depilacao-laser-tecnologia.jpg" alt="depilacao-laser" class="image-tec" />
+            <img src="image/depilacao-laser-tecnologia.webp" alt="depilacao-laser" class="image-tec" loading="lazy" />
             <div class="box-text-tec">
               <h2>Depilação a Laser</h2>
             
@@ -436,7 +479,7 @@
           </div>
           
           <div class="box-tec">
-            <img src="image/criolipolise-tecnologia.png" alt="criolipolise" class="image-tec" />
+            <img src="image/criolipolise-tecnologia.webp" alt="criolipolise" class="image-tec" loading="lazy" />
             
             <div class="box-text-tec">
               <h2>Criolipólise</h2>
@@ -452,19 +495,12 @@
           </div>
           
           <div class="box-tec">
-            <img src="image/ledterapia-tecnologia.jpg" alt="led-terapia" class="image-tec" />
+            <img src="image/ledterapia-tecnologia.jpg" alt="led-terapia" class="image-tec" loading="lazy" />
             <div class="box-text-tec">
               <h2>LED Terapia</h2>
             
               <p>
                 Utilizada para tratamento de lesões inflamatórias, acne e regeneração da pele.
-                <!--  
-                  Principais Indicações:
-              </br>Rugas e flacidez
-                </br>Cicatrizes e acne
-                </br>Estrias e melasma 
-                </br>Remoção de tatuagens
-              -->
               </p>
             </div>
           </div>
@@ -473,9 +509,15 @@
     </section>
   </main>
 
+    <div class="section-bottom-svg">
+			<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+	      <path class="elementor-shape-fill" d="M500,98.9L0,6.1V0h1000v6.1L500,98.9z"></path>
+      </svg>		
+    </div>
+
   <footer class="flex">
     <div class="logo-footer flex col">
-      <img src="image/logo-dimecionado.png" alt="Logo Clínica Beatriz Franchito" />
+      <img src="image/logo-dimecionado.png" alt="Logo Clínica Beatriz Franchito" loading="lazy" />
       <span>Clínica de Dermatologia<br>Dra. Beatriz Franchito</span>
     </div>
 
@@ -594,20 +636,21 @@
   <div class="footer-copy">
     <p>&copy; <span id="ano"></span> Clínica Beatriz Franchito – Todos os direitos reservados | 
       <strong class="strong-developer">
-        <a class="a-developer" href="#https://github.com/mvamaral/">DIREX SISTEMAS</a>
+        <a class="a-developer" href="#https://github.com/mvamaral/">DBB SISTEMAS</a>
       </strong>
     </p>
   </div>
 
   <div class="whatsapp whatsapp-hidden">
     <a
-      href="https://api.whatsapp.com/send?phone=5518991501965&text=Ol%C3%A1%2C%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20%20sobre%20o%20curso%20online"
+      href="https://api.whatsapp.com/send?phone=5518991501965&text=Olá%2C%20gostaria%20de%20marcar%20uma%20consulta!"
       target="_blank">
       <img
         src="image/whatsapp-logo.png"
         alt="Logo do Whatsapp"
     /></a>
   </div>
+  
 
   <script src="js/main.js" defer></script>
   <script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
