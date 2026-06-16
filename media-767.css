@@ -1,16 +1,20 @@
 @media all and (max-width: 47.94em) {
-  /* HEADER */
-  header {
-    margin: 0 3.12rem 0 0;
-    justify-content: none;
-    margin: 0 6.1rem 0 0;
-    padding: 1.6rem 2.5rem;
-    justify-content: space-between;
-    .header-divider {
-      flex-flow: column;
-      align-items: center;
-      padding-top: 6.1rem;
-      gap: 1.6rem;
+  html {
+    font-size: 43.75%;
+  }
+
+  /* CLINICA */
+  .section-clinica {
+    padding: 6.1rem;
+
+    & .container-clinica {
+      justify-content: center;
+      flex-flow: column-reverse;
+
+      & .box-text {
+        transform: translate(0);
+        margin-bottom: 2.5rem;
+      }
     }
   }
 
@@ -31,10 +35,40 @@
     }
   }
 
+  header {
+    display: none;
+  }
+  /* HEADER
+    margin: 0 3.12rem 0 0;
+    justify-content: none;
+    margin: 0 6.1rem 0 0;
+    padding: 1.6rem 2.5rem;
+    justify-content: space-between;
+    .header-divider {
+      flex-flow: column;
+      align-items: center;
+      padding-top: 6.1rem;
+      gap: 1.6rem;
+    }
+  }
+     */
+
   /* TRATAMENTOS CAPILARES */
 
   /* FOOTER */
   footer {
+    justify-content: space-around;
     flex-wrap: wrap;
+    & .container-contatos {
+      & .box-contatos {
+        & .contatos {
+          align-items: flex-start;
+        }
+      }
+    }
+
+    & .a-contatos {
+      flex-direction: row;
+    }
   }
 }

@@ -219,6 +219,7 @@ header {
   box-shadow: 0 0.21rem 0.4rem rgb(0, 0, 0, 0.1);
 
   .header-divider {
+    align-items: center;
     gap: 3.12rem;
   }
 
@@ -461,13 +462,9 @@ header {
 }
 
 .container-clinica {
-  display: flex;
-
   & .box-text {
     flex: 1;
-    display: flex;
-    flex-flow: column;
-    gap: 3rem;
+    gap: 3.12rem;
     transform: translate(-20%, 5%);
     z-index: 2;
 
@@ -758,6 +755,7 @@ header {
 }
 
 .title-procedimentos {
+  justify-content: center;
   & h2 {
     text-transform: uppercase;
     font-weight: 500;
@@ -923,7 +921,7 @@ header {
     gap: 3.12rem;
 
     & .content-cards {
-      justify-content: space-between;
+      justify-content: center;
       flex: 1;
       gap: 3.12rem;
     }
@@ -1032,6 +1030,7 @@ header {
   }
 
   & .content-tecnologias {
+    width: 100vw;
     gap: 3.9rem;
     background-color: var(--cor-background-light);
     padding: 3.9rem 6.1rem;
@@ -1088,7 +1087,7 @@ header {
       color: #7e5217;
       font-weight: 600;
       transition: transform 0.4s ease;
-      transform: translateY(100px);
+      transform: translateY(10rem);
     }
 
     & P {
@@ -1151,9 +1150,9 @@ header {
 footer {
   color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 4.2rem;
+  gap: 3.12rem;
   padding: 5rem 6rem;
   background-color: var(--cor-customized-hover);
 
@@ -1174,35 +1173,62 @@ footer {
     }
   }
 
-  & .contatos {
-    gap: 2rem;
+  & .container-contatos {
+    gap: 3.12rem;
 
-    & > span {
-      font-size: 1.8rem;
-      font-weight: 700;
+    & .box-contatos {
+      & .contatos {
+        flex-flow: column;
+        gap: 2rem;
+
+        & > span {
+          white-space: nowrap;
+          font-size: 1.8rem;
+          font-weight: 700;
+        }
+      }
+
+      & .icons-contatos {
+        flex-flow: column;
+        gap: 2rem;
+
+        & .a-contatos {
+          align-items: center;
+          gap: 2rem;
+          transition: all 0.3s;
+
+          & span {
+            text-align: center;
+            font-size: 1.4rem;
+          }
+        }
+      }
     }
   }
 
-  & .localizacao {
-    gap: 2.7rem;
-    min-width: 28rem;
+  & .box-localizacao {
+    & .localizacao {
+      gap: 2rem;
+      min-width: 28rem;
 
-    & strong {
-      font-size: 1.6rem;
+      .mapa {
+        gap: 1.02rem;
+
+        & iframe {
+          border: 0;
+          width: 100%;
+          height: 20rem;
+          border-radius: 1rem;
+        }
+      }
+
+      & strong {
+        font-size: 1.6rem;
+      }
+      & span {
+        font-size: 1.4rem;
+      }
     }
-    & span {
-      font-size: 1.4rem;
-    }
-  }
-}
-
-.a-contatos {
-  align-items: center;
-  gap: 2rem;
-  transition: all 0.3s;
-
-  & span {
-    font-size: 1.4rem;
   }
 }
 
