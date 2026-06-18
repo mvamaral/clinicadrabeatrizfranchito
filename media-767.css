@@ -23,15 +23,23 @@
     gap: 2.5rem;
 
     & .cirurgia-img {
-      grid-row: 2 / 4;
+      grid-row: 3 / 4;
+      grid-column: 1 / span 2;
+      width: 100%;
     }
 
     & .title-procedimentos {
       grid-column: 1 / 3;
     }
 
+    & .text-cirugia {
+      grid-column: 1 / 3;
+    }
+
+
     & .card-cirurgia {
       gap: 2.5rem;
+      grid-column: 1 / 3;
     }
   }
 
@@ -54,21 +62,29 @@
      */
 
   /* TRATAMENTOS CAPILARES */
+  .content-capilares {
+    flex-flow: column;
+  }
+
 
   /* FOOTER */
   footer {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     justify-content: space-around;
-    flex-wrap: wrap;
-    & .container-contatos {
-      & .box-contatos {
-        & .contatos {
-          align-items: flex-start;
-        }
-      }
+
+    .box-contatos {
+      align-items: start;
     }
 
     & .a-contatos {
       flex-direction: row;
     }
+
+    & .box-localizacao {
+      grid-column: 1 / span 2;
+    }
+
   }
-}
+
+    

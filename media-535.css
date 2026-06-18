@@ -1,0 +1,15 @@
+@media all and (max-width: 33.437em) {
+  footer {
+    & .container-contatos {
+      & .box-contatos {
+        align-items: center;
+
+        & .icons-contatos {
+          & .a-contatos {
+            flex-flow: column;
+          }
+        }
+      }
+    }
+  }
+}

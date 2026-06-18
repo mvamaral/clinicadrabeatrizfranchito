@@ -30,6 +30,18 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
+  &.cols-2-auto {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  &.cols-3-auto {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  &.cols-4-auto {
+    grid-template-columns: repeat(4, auto);
+  }
+
   &.gap-2 {
     gap: 0.5rem;
   }
@@ -87,7 +99,8 @@ body {
 
 h1 {
   font-family: "Playfair Display", serif;
-  font-size: 3.32rem;
+  /* font-size: 3.32rem; */
+  font-size: 3.98rem;
   line-height: 1;
   font-weight: 600;
 }
@@ -182,7 +195,6 @@ h2 {
 .h1-title {
   padding-bottom: 1rem;
   width: max-content;
-  font-size: 5.73rem;
   letter-spacing: 0.15rem;
   z-index: 9;
   color: var(--cor-customized);
@@ -473,7 +485,6 @@ header {
       position: relative;
       letter-spacing: 1.5px;
       z-index: 2;
-      font-size: 5.73rem;
       color: var(--cor-customized);
 
       &::after {
@@ -829,7 +840,6 @@ header {
     z-index: 2;
 
     & h3 {
-      font-size: 2.76rem;
       text-transform: uppercase;
       font-size-adjust: 0.3;
     }
@@ -1030,7 +1040,6 @@ header {
   }
 
   & .content-tecnologias {
-    width: 100vw;
     gap: 3.9rem;
     background-color: var(--cor-background-light);
     padding: 3.9rem 6.1rem;
@@ -1058,8 +1067,8 @@ header {
   /* border: solid #303030 0.1rem; */
   box-shadow: inset 0 4px 12px rgba(43, 43, 43, 0.1);
   position: relative;
-  width: 36rem;
-  height: 40rem;
+  max-width: 36rem;
+  max-height: 40rem;
   background-color: white;
   overflow: hidden;
   cursor: pointer;
@@ -1177,15 +1186,13 @@ footer {
     gap: 3.12rem;
 
     & .box-contatos {
-      & .contatos {
-        flex-flow: column;
-        gap: 2rem;
+      flex-flow: column;
+      gap: 2.5rem;
 
-        & > span {
-          white-space: nowrap;
-          font-size: 1.8rem;
-          font-weight: 700;
-        }
+      & > span {
+        white-space: nowrap;
+        font-size: 1.6rem;
+        font-weight: 700;
       }
 
       & .icons-contatos {
@@ -1196,11 +1203,6 @@ footer {
           align-items: center;
           gap: 2rem;
           transition: all 0.3s;
-
-          & span {
-            text-align: center;
-            font-size: 1.4rem;
-          }
         }
       }
     }
@@ -1208,7 +1210,7 @@ footer {
 
   & .box-localizacao {
     & .localizacao {
-      gap: 2rem;
+      gap: 2.5rem;
       min-width: 28rem;
 
       .mapa {
@@ -1272,6 +1274,12 @@ footer {
 .whatsapp:hover,
 .whatsapp:active {
   transform: translate(-12.5%, -12.5%);
+}
+
+.a-contatos span {
+  white-space: nowrap;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 @keyframes scrollMove {
