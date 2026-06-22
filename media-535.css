@@ -1,4 +1,14 @@
 @media all and (max-width: 33.437em) {
+  .container-cards {
+    align-items: center;
+    flex-flow: column;
+
+    & .injetaveis-card {
+      width: 35rem;
+      height: 40rem;
+    }
+  }
+
   footer {
     & .container-contatos {
       & .box-contatos {

@@ -135,6 +135,7 @@ h5 {
 }
 
 span {
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
@@ -157,7 +158,7 @@ svg {
 .section {
   display: flex;
   justify-content: center;
-  scroll-margin-top: 14rem; /* SAIR DO MAIN */
+  scroll-margin-top: 10rem; /* SAIR DO MAIN */
 }
 
 .container {
@@ -213,6 +214,10 @@ h2 {
 }
 
 /* CABEÇALHO */
+.nav-mobile {
+  display: none;
+}
+
 header {
   transform: translateY(-100%);
   display: flex;
@@ -223,6 +228,7 @@ header {
   left: 0;
   gap: 3.12rem;
   width: 100%;
+  max-height: 11rem;
   padding: 1.6rem;
   background-color: rgba(255, 255, 255, 75%);
   backdrop-filter: blur(30px);
@@ -230,13 +236,22 @@ header {
   z-index: 99;
   box-shadow: 0 0.21rem 0.4rem rgb(0, 0, 0, 0.1);
 
-  .header-divider {
+  .nav-divider {
     align-items: center;
     gap: 3.12rem;
   }
 
-  & img {
-    width: 10rem;
+  & .logo {
+    max-height: 100%;
+    transition: all ease-in 100ms;
+
+    & img {
+      width: 10rem;
+    }
+
+    &:hover {
+      filter: sepia(85%) saturate(360%) brightness(55%) hue-rotate(340deg);
+    }
   }
 
   & nav {
@@ -275,13 +290,14 @@ header {
     gap: 1.28rem;
     font-size: 18px;
     margin-left: 10px;
+    /* color: var(--cor-customized); */
 
     & svg {
       width: 2.5rem;
       transition: all ease-in 300ms;
 
       &:hover {
-        color: var(--cor-customized);
+        color: var(--cor-brown);
         transform: scale(1.2);
       }
     }
@@ -470,7 +486,7 @@ header {
   position: relative;
   background-size: cover;
   background-position: 50%;
-  padding: 6.1rem 0;
+  padding-top: 6.1rem;
 }
 
 .container-clinica {
@@ -516,7 +532,7 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    min-height: 50rem;
+    min-height: 45rem;
     margin: 0 auto;
     max-width: 100rem;
   }
@@ -611,6 +627,8 @@ header {
 
 /* previous button */
 .carousel-control-previous::before {
+  justify-self: center;
+  align-self: center;
   display: block;
   content: "❮";
   border-radius: 2px;
@@ -618,6 +636,8 @@ header {
 
 /* next button */
 .carousel-control-next::before {
+  justify-self: center;
+  align-self: center;
   display: block;
   content: "❯";
   border-radius: 2px;
@@ -700,6 +720,7 @@ header {
 .section-dermatologia {
   position: relative;
   padding: 6.1rem;
+  padding-bottom: 0;
   gap: 3.12rem;
 
   &::before,
@@ -739,6 +760,7 @@ header {
 /* PROCEDIMENTOS*/
 .section-procedimentos {
   padding: 6.1rem 0;
+  padding-bottom: 0;
   & .container-injetaveis,
   & .container-capilares {
     justify-content: center;
@@ -814,8 +836,10 @@ header {
 /* INJETÁVEIS */
 .injetaveis-card {
   position: relative;
-  width: 29vw;
-  height: 40vw;
+  width: 35rem;
+  height: 40rem;
+  /* width: 29vw;
+  height: 40vw; */
   border-radius: 1.5rem;
   background-color: black;
   overflow: hidden;
@@ -958,6 +982,7 @@ header {
 }
 
 .img-tratamento {
+  max-height: 36rem;
   min-width: 100%;
 
   & img {
@@ -1032,6 +1057,8 @@ header {
 
 /* TECNOLOGIAS */
 .section-tecnologias {
+  padding: 6.1rem 0;
+  padding-bottom: 0;
   flex-flow: column;
   gap: 3.9rem;
 
@@ -1136,8 +1163,6 @@ header {
 }
 
 .section-bottom-svg {
-  transform: translate(0, 1px);
-  /* position: absolute; */
   direction: ltr;
   left: 0;
   line-height: 0;
@@ -1145,13 +1170,18 @@ header {
   width: 100%;
   color: var(--cor-brown);
 
+  &.svg-adjust {
+    transform: rotate(180deg);
+    /* left: 0; */
+  }
+
   & svg {
     display: block;
     left: 50%;
     position: relative;
     transform: translateX(-50%);
-    width: calc(100% + 1.3px);
-    height: 4px;
+    width: calc(100% + 0.13rem);
+    height: 0.6rem;
   }
 }
 
@@ -1164,6 +1194,10 @@ footer {
   gap: 3.12rem;
   padding: 5rem 6rem;
   background-color: var(--cor-customized-hover);
+
+  & .span-titulos {
+    font-size: 1.92rem;
+  }
 
   & .logo-footer {
     display: flex;
@@ -1186,14 +1220,14 @@ footer {
     gap: 3.12rem;
 
     & .box-contatos {
+      font-size:;
       flex-flow: column;
       gap: 2.5rem;
 
-      & > span {
+      /* & > span {
         white-space: nowrap;
-        font-size: 1.6rem;
         font-weight: 700;
-      }
+      } */
 
       & .icons-contatos {
         flex-flow: column;
@@ -1222,13 +1256,6 @@ footer {
           height: 20rem;
           border-radius: 1rem;
         }
-      }
-
-      & strong {
-        font-size: 1.6rem;
-      }
-      & span {
-        font-size: 1.4rem;
       }
     }
   }
@@ -1278,8 +1305,6 @@ footer {
 
 .a-contatos span {
   white-space: nowrap;
-  font-size: 1.6rem;
-  font-weight: 700;
 }
 
 @keyframes scrollMove {

@@ -1,29 +1,7 @@
 @media all and (max-width: 61.94em) {
-  header {
-    /* margin: 0 3.12rem 0 0; */
-    /*
-    justify-content: none;
-    margin: 0 6.1rem 0 0;
-    padding: 1.6rem 2.5rem;
-    justify-content: space-between;
-    .header-divider {
-      flex-flow: column;
-      align-items: center;
-      padding-top: 6.1rem;
-      gap: 1.6rem;
-    }*/
-  }
-
-  .h1-title {
-    font-size: 4.78rem;
-  }
-
-  .container-clinica {
-    & .box-text {
-      & h1 {
-        font-size: 4.78rem;
-      }
-    }
+  .injetaveis-card {
+    width: 28.25vw;
+    height: 32.29vw;
   }
 
   .box-contatos {

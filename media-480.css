@@ -1,2 +1,20 @@
 @media all and (max-width: 30em) {
+  footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    & .container-contatos {
+      flex-flow: column;
+
+      & .box-contatos {
+        align-items: center;
+      }
+    }
+
+    & .box-localizacao {
+      justify-self: center;
+      align-self: center;
+    }
+  }
 }
