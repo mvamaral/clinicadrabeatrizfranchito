@@ -730,7 +730,7 @@ header {
 
   & h2 {
     text-transform: uppercase;
-    font-size-adjust: 0.3;
+    /* font-size-adjust: 0.3; */
   }
 
   & .box-text {
@@ -796,7 +796,7 @@ header {
   }
 
   & h3 {
-    font-size-adjust: 0.5;
+    /* font-size-adjust: 0.5; */
     font-style: italic;
     color: #7e5217;
   }
@@ -816,7 +816,7 @@ header {
 
   & h4 {
     color: #3a564f;
-    font-size-adjust: 0.5;
+    /* font-size-adjust: 0.5; */
     /* text-transform: uppercase; */
     font-weight: 600;
   }
@@ -855,6 +855,9 @@ header {
   }
 
   & .card-box {
+    justify-content: start;
+    display: flex;
+    flex-flow: column;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -865,18 +868,22 @@ header {
 
     & h3 {
       text-transform: uppercase;
-      font-size-adjust: 0.3;
+      /* font-size-adjust: 0.4; */
     }
 
     & .card-title {
       margin: 0;
       transform: translateY(60px);
       transition: transform 0.4s ease;
+
+      & .card-bio {
+        transform: translateY(37px);
+      }
     }
 
     & .card-text {
-      font-size-adjust: 0.4;
-      margin-top: 1rem;
+      /* font-size-adjust: 0.4; */
+      margin-top: 1.02rem;
       opacity: 0;
       transition: opacity 0.3s ease;
       transform: translateY(200px);
@@ -1196,6 +1203,7 @@ footer {
   background-color: var(--cor-customized-hover);
 
   & .span-titulos {
+    white-space: nowrap;
     font-size: 1.92rem;
   }
 

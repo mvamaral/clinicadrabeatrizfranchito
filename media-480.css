@@ -11,10 +11,5 @@
         align-items: center;
       }
     }
-
-    & .box-localizacao {
-      justify-self: center;
-      align-self: center;
-    }
   }
 }

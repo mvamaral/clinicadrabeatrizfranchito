@@ -61,6 +61,12 @@
   .container-cirurgia {
     gap: 2.5rem;
 
+    & .card-title {
+      & .card-bio {
+        transform: translateY(40px);
+      }
+    }
+
     & .cirurgia-img {
       max-height: 36rem;
       grid-row: 3 / 4;
@@ -103,6 +109,14 @@
 
     & .box-localizacao {
       grid-column: 1 / span 2;
+
+      & .localizacao {
+        align-items: center;
+
+        & .mapa {
+          align-items: center;
+        }
+      }
     }
   }
 }
