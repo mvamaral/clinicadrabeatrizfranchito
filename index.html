@@ -38,7 +38,7 @@
 
   <body>
     <!-- Cabeçalho -->
-    <header>
+    <header id="header" class="">
       <div class="logo">
         <a href="#inicio"
           ><img
@@ -50,6 +50,7 @@
             sizes="100vw"
         /></a>
       </div>
+
       <div class="flex nav-divider">
         <nav class="navegacao">
           <a href="#inicio">Home</a>
@@ -67,6 +68,7 @@
           >
         </div>
       </div>
+
       <div class="box-social">
         <a
           href="https://www.instagram.com/drabiafranchito/"
@@ -128,15 +130,21 @@
           </svg>
         </a>
       </div>
-      <nav class="nav-mobile">
-        <div>
-          <a href="#inicio"
-            ><img
-              alt="Logo Clínica Beatriz Franchito"
-              src="image/logo-480x.png"
-          /></a>
-        </div>
-      </nav>
+
+      <div class="nav-mobile">
+        <img
+          id="open"
+          class="nav-icon icon-open"
+          alt="Menu Open"
+          src="image/burger-menu.svg"
+        />
+        <img
+          id="close"
+          class="nav-icon icon-close"
+          alt="Menu Close"
+          src="image/close-menu.svg"
+        />
+      </div>
     </header>
 
     <!-- Hero -->
@@ -936,6 +944,7 @@
     </div>
 
     <script src="js/main.js" defer></script>
+    <script src="js/nav-mobile.js" defer></script>
     <script>
       document.getElementById("ano").textContent = new Date().getFullYear();
     </script>

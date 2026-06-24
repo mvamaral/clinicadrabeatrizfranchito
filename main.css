@@ -214,9 +214,6 @@ h2 {
 }
 
 /* CABEÇALHO */
-.nav-mobile {
-  display: none;
-}
 
 header {
   transform: translateY(-100%);
@@ -230,7 +227,7 @@ header {
   width: 100%;
   max-height: 11rem;
   padding: 1.6rem;
-  background-color: rgba(255, 255, 255, 75%);
+  background-color: rgba(255, 255, 255, 85%);
   backdrop-filter: blur(30px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   z-index: 99;
@@ -289,9 +286,12 @@ header {
     display: flex;
     gap: 1.28rem;
     font-size: 18px;
-    margin-left: 10px;
     /* color: var(--cor-customized); */
 
+    & a {
+      display: flex;
+      justify-content: center;
+    }
     & svg {
       width: 2.5rem;
       transition: all ease-in 300ms;
@@ -301,6 +301,11 @@ header {
         transform: scale(1.2);
       }
     }
+  }
+
+  & .nav-mobile {
+    display: none;
+    width: 5rem;
   }
 }
 
@@ -677,7 +682,7 @@ header {
 /* DRA. BEATRIZ */
 .section-dra-beatriz {
   box-shadow: inset 0 4px 12px rgba(43, 43, 43, 0.1);
-  padding: 6.1rem;
+  padding: 6.1rem 3.9rem;
   padding-bottom: 9.54rem;
   background-image: url("image/doutora-background.png");
   background-position: 50%;
@@ -713,47 +718,6 @@ header {
     & .space-div {
       flex: 2;
     }
-  }
-}
-
-/* DERMATOLOGIA */
-.section-dermatologia {
-  position: relative;
-  padding: 6.1rem;
-  padding-bottom: 0;
-  gap: 3.12rem;
-
-  &::before,
-  &::after {
-    opacity: 0;
-  }
-
-  & h2 {
-    text-transform: uppercase;
-    /* font-size-adjust: 0.3; */
-  }
-
-  & .box-text {
-    border-radius: var(--top-left-bottom-right);
-    background-color: #7e5217;
-
-    & p {
-      color: white;
-      font-style: italic;
-    }
-  }
-
-  & .img-dermatologia {
-    width: 70rem;
-    height: 40rem;
-    border-radius: var(--top-right-bottom-left);
-    background-image: url("dermatologia-e-a-funcao-desta-importante-area-da-medicina-03042019102035.png");
-  }
-
-  & .box-text {
-    padding: 2.5rem;
-    width: 45rem;
-    height: 25rem;
   }
 }
 
@@ -1188,7 +1152,7 @@ header {
     position: relative;
     transform: translateX(-50%);
     width: calc(100% + 0.13rem);
-    height: 0.6rem;
+    height: 0.4rem;
   }
 }
 
@@ -1199,7 +1163,7 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   gap: 3.12rem;
-  padding: 5rem 6rem;
+  padding: 3.9rem 6.1rem;
   background-color: var(--cor-customized-hover);
 
   & .span-titulos {
@@ -1315,6 +1279,7 @@ footer {
   white-space: nowrap;
 }
 
+/* Inicia o icone Whatsapp após scroll */
 @keyframes scrollMove {
   to {
     transform: translateY(-15px);
