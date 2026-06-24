@@ -5,8 +5,6 @@
 
   .section {
     scroll-margin-top: 7rem;
-    /* 
-    link Scroll até section */
   }
 
   /* HEADER */
@@ -74,7 +72,6 @@
       padding: 2rem 0;
       align-items: center;
       flex-flow: column;
-      /* gap: 1.02rem; */
     }
 
     & .box-social {

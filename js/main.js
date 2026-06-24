@@ -157,23 +157,6 @@ function initHeaderScroll() {
 }
 
 /* ============================================================
-   NAV – aparece ao rolar
-   
-function initNavScroll() {
-  const nav = document.querySelector("nav");
-  if (!nav) return;
-  window.addEventListener(
-    "scroll",
-    () => {
-      nav.style.transform =
-        window.scrollY > 50 ? "translateY(93%)" : "translateY(-100%)";
-    },
-    { passive: true },
-  );
-}
-============================================================ */
-
-/* ============================================================
    SMOOTH SCROLL – links da nav
    ============================================================ */
 function initSmoothScroll() {
