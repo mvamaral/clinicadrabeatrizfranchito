@@ -1,4 +1,14 @@
 @media all and (max-width: 30em) {
+  header {
+    &.nav-open {
+      & .nav-divider {
+        & .navegacao {
+          padding: 2rem;
+        }
+      }
+    }
+  }
+
   footer {
     display: flex;
     flex-flow: column;

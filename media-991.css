@@ -1,4 +1,27 @@
 @media all and (max-width: 61.94em) {
+  header {
+    padding-left: 1.02rem;
+    padding-right: 1.02rem;
+    gap: 2rem;
+
+    & .logo {
+      & img {
+        width: 7rem;
+      }
+    }
+
+    & .nav-divider {
+      gap: 2rem;
+      & .navegacao {
+        gap: 1.02rem;
+      }
+    }
+
+    & .box-social {
+      gap: 1.02rem;
+    }
+  }
+
   .injetaveis-card {
     width: 28.25vw;
     height: 32.29vw;

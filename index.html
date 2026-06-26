@@ -12,12 +12,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?" rel="stylesheet" />
+
     <!-- prioridade no carregamento do CSS para evitar FOUC (Flash of Unstyled Content/ Flash de conteúdo sem estilo)
-  <link rel="preload" href="main.css" as="style"/>
-  -->
+    -->
+    <link rel="preload" href="main.css" as="style" />
+
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="media-1400.css" media="(max-width: 1400px)" />
     <link rel="stylesheet" href="media-1119.css" media="(max-width: 1119px)" />
@@ -25,6 +28,7 @@
     <link rel="stylesheet" href="media-767.css" media="(max-width: 767px)" />
     <link rel="stylesheet" href="media-535.css" media="(max-width: 535px)" />
     <link rel="stylesheet" href="media-480.css" media="(max-width: 480px)" />
+    <link rel="stylesheet" href="media-415.css" media="(max-width: 415px)" />
 
     <script defer src="js/carousel.js"></script>
     <noscript
@@ -44,10 +48,12 @@
           ><img
             alt="Logo Clínica Beatriz Franchito"
             src="image/logo.png"
-            srcset="image/logo-991x.png 991vw,
-      image/logo-767x.png 767vw,
-      image/logo-480x.png 480vw"
-            sizes="100vw"
+            srcset="image/logo-991x.png 991w, image/logo-480x.png 480w"
+            sizes="
+            (max-width: 1366px) 90px,
+            (max-width: 991px) 80px,
+            (max-width: 480px) 56px,
+            100px"
         /></a>
       </div>
 
@@ -152,7 +158,18 @@
     <div id="video-container">
       <!-- Cena: logo -->
       <div class="scene scene-1" data-duration="5000">
-        <img src="image/final_logo.png" alt="Logo da Clínica" />
+        <img
+          alt="Logo da Clínica"
+          src="image/final_logo.png"
+          srcset="
+            image/final_logo-1920x.png 1920w,
+            image/final_logo-1366x.png 1366w,
+            image/final_logo-991x.png   991w,
+            image/final_logo-767x.png   767w,
+            image/final_logo-480x.png   480w
+          "
+          sizes="100vw"
+        />
         <div class="overlay"></div>
         <div class="scene-content">
           <h2>Clinica de Dermatologia</h2>
@@ -162,7 +179,17 @@
 
       <!-- Cena 1: Fachada -->
       <div class="scene scene-1" data-duration="5000">
-        <img src="image/fachada.png" alt="Fachada da Clínica" />
+        <img
+          alt="Fachada da Clínica"
+          src="image/fachada.png"
+          srcset="
+            image/fachada-1366x.png 1366w,
+            image/fachada-991x.png   991w,
+            image/fachada-767x.png   767w,
+            image/fachada-480x.png   480w
+          "
+          sizes="100vw"
+        />
         <div class="overlay"></div>
         <div class="scene-content">
           <h2>Bem-vindo à excelência</h2>
@@ -172,7 +199,18 @@
 
       <!-- Cena 2: Recepção -->
       <div class="scene scene-2" data-duration="5000">
-        <img src="image/recepcao.png" alt="Recepção" />
+        <img
+          alt="Recepção"
+          src="image/recepcao.png"
+          srcset="
+            image/recepcao-1920x.png 1920w,
+            image/recepcao-1366x.png 1366w,
+            image/recepcao-991x.png   991w,
+            image/recepcao-767x.png   767w,
+            image/recepcao-480x.png   480w
+          "
+          sizes="100vw"
+        />
         <div class="overlay"></div>
         <div class="scene-content">
           <h2>Um ambiente acolhedor</h2>
@@ -185,7 +223,18 @@
 
       <!-- Cena 3: Atendimento -->
       <div class="scene scene-3" data-duration="7500">
-        <img src="image/consulta.png" alt="Consulta Dermatológica" />
+        <img
+          alt="Consulta Dermatológica"
+          src="image/consulta.png"
+          srcset="
+            image/consulta-1920x.png 1920w,
+            image/consulta-1366x.png 1366w,
+            image/consulta-991x.png   991w,
+            image/consulta-767x.png   767w,
+            image/consulta-480x.png   480w
+          "
+          sizes="100vw"
+        />
         <div class="overlay"></div>
         <div class="scene-content">
           <h2>Cuidado Especializado</h2>
@@ -198,7 +247,18 @@
 
       <!-- Cena 4: Procedimentos -->
       <div class="scene scene-4" data-duration="7500">
-        <img src="image/procedimento.png" alt="Procedimentos Estéticos" />
+        <img
+          alt="Procedimentos Estéticos"
+          src="image/procedimento.png"
+          srcset="
+            image/procedimento-1920x.png 1920w,
+            image/procedimento-1366x.png 1366w,
+            image/procedimento-991x.png   991w,
+            image/procedimento-767x.png   767w,
+            image/procedimento-480x.png   480w
+          "
+          sizes="100vw"
+        />
         <div class="overlay"></div>
         <div class="scene-content">
           <h2>Tecnologia de Ponta</h2>
@@ -211,7 +271,18 @@
 
       <!-- Cena 5: Resultados -->
       <div class="scene scene-5" data-duration="7500">
-        <img src="image/resultado.png" alt="Resultados e Confiança" />
+        <img
+          alt="Resultados e Confiança"
+          src="image/resultado.png"
+          srcset="
+            image/resultado-1920x.png 1920w,
+            image/resultado-1366x.png 1366w,
+            image/resultado-991x.png   991w,
+            image/resultado-767x.png   767w,
+            image/resultado-480x.png   480w
+          "
+          sizes="100vw"
+        />
         <div class="overlay"></div>
         <div class="scene-content">
           <h2>Confiança que se reflete</h2>
@@ -226,17 +297,33 @@
       <div class="scene scene-6" data-duration="7500">
         <!-- Background slightly blurred - fundo um pouco desfocado -->
         <img
-          src="image/fachada.png"
-          alt="Fachada Fundo"
           style="filter: blur(10px); transform: scale(1.1)"
+          alt="Fachada Fundo"
+          src="image/fachada.png"
+          srcset="
+            image/fachada-1366x.png 1366w,
+            image/fachada-991x.png   991w,
+            image/fachada-767x.png   767w,
+            image/fachada-480x.png   480w
+          "
+          sizes="100vw"
         />
         <div class="overlay" style="background: rgba(0, 0, 0, 0.6)"></div>
         <!-- caixa logo -->
         <div class="scene-content">
           <img
-            src="image/logo-dimecionado.png"
-            alt="Logo Clínica Beatriz Franchito"
             class="logo"
+            alt="Logo Clínica Beatriz Franchito"
+            src="image/logo-dimecionado.png"
+            srcset="
+              image/logo-dimecionado-991x.png 991w,
+              image/logo-dimecionado-480x.png 480w
+            "
+            sizes="
+            (max-width: 1366px) 225px,
+            (max-width: 991px) 200px,            
+            (max-width: 480px) 175px,
+            250px"
           />
           <p>Sinta a diferença de um cuidado feito para você.</p>
         </div>
@@ -353,10 +440,22 @@
             <div class="flex container-cards">
               <div class="injetaveis-card">
                 <img
-                  src="image/harmonizacao-depois.png"
                   alt="Harmonização Facial"
                   class="card-img"
                   loading="lazy"
+                  src="image/harmonizacao-depois.png"
+                  srcset="
+                    image/harmonizacao-depois-1366x.png 1366w,
+                    image/harmonizacao-depois-991x.png   991w,
+                    image/harmonizacao-depois-767x.png   767w,
+                    image/harmonizacao-depois-480x.png   480w
+                  "
+                  sizes="
+                    (max-width: 1366px) 315px,
+                    (max-width: 991px) 280px,
+                    (max-width: 767px) 217px,
+                    (max-width: 480px) 245px,
+                    350px"
                 />
 
                 <div class="card-box">
@@ -372,10 +471,20 @@
 
               <div class="injetaveis-card">
                 <img
-                  src="image/toxina-botulinica.jpg"
                   alt="Toxina Botulínica"
                   class="card-img"
                   loading="lazy"
+                  src="image/toxina-botulinica.jpg"
+                  srcset="
+                    image/toxina-botulinica-767x.jpg 767w,
+                    image/toxina-botulinica-480x.jpg 480w
+                  "
+                  sizes="
+                    (max-width: 1366px) 315px,
+                    (max-width: 991px) 280px,
+                    (max-width: 767px) 217px,
+                    (max-width: 480px) 245px,
+                    350px"
                 />
 
                 <div class="card-box">
@@ -389,10 +498,17 @@
 
               <div class="injetaveis-card">
                 <img
-                  src="image/bioestimuladores-colageno.png"
                   alt="Bioestimuladores"
                   class="card-img"
                   loading="lazy"
+                  src="image/bioestimuladores-colageno.png"
+                  srcset="image/bioestimuladores-colageno-480x.png 480w"
+                  sizes="
+                    (max-width: 1366px) 315px,
+                    (max-width: 991px) 280px,
+                    (max-width: 767px) 217px,
+                    (max-width: 480px) 245px,
+                    350px"
                 />
                 <div class="card-box">
                   <h3 class="card-title card-bio">Bioestimuladores</h3>
@@ -428,11 +544,12 @@
                 media="(max-width: 767px)"
               />
               <img
-                src="image/cirurgia.png"
                 alt="Cirurgia Dermatológica"
                 loading="lazy"
+                src="image/cirurgia.png"
+                srcset="image/cirurgia-767x.png 767w"
+                sizes="(max-width: 767px) 335px"
               />
-              <!-- srcset="image/cirurgia-mobile-767x.png 767vw" sizes="100vw" -->
             </picture>
           </div>
 
@@ -539,23 +656,58 @@
                 <div class="flex all-img-tratamento">
                   <div class="img-tratamento">
                     <img
+                      alt="Tratamento Capilar"
+                      loading="lazy"
                       src="image/tratamento-capilar-3.webp"
-                      alt="Tratamento Capilar"
-                      loading="lazy"
+                      srcset="
+                        image/tratamento-capilar-3-767x.webp 767w,
+                        image/tratamento-capilar-3-480x.webp 480w
+                      "
+                      sizes="
+                        (max-width: 1366px) 615px,
+                        (max-width: 1280px) 571px,
+                        (max-width: 991px) 435px,
+                        (max-width: 767px) 322px,
+                        (max-width: 480px) 395px,
+                        883px"
                     />
                   </div>
                   <div class="img-tratamento">
                     <img
+                      alt="Tratamento Capilar"
+                      loading="lazy"
                       src="image/tratamento-capilar-2.jpg"
-                      alt="Tratamento Capilar"
-                      loading="lazy"
+                      srcset="
+                        image/tratamento-capilar-2-767x.jpg 767w,
+                        image/tratamento-capilar-2-480x.jpg 480w
+                      "
+                      sizes="
+                        (max-width: 1366px) 615px,
+                        (max-width: 1280px) 571px,
+                        (max-width: 991px) 435px,
+                        (max-width: 767px) 322px,
+                        (max-width: 480px) 395px,
+                        883px"
                     />
                   </div>
                   <div class="img-tratamento">
                     <img
-                      src="image/tratamento-capilar-1.jpg"
                       alt="Tratamento Capilar"
                       loading="lazy"
+                      src="image/tratamento-capilar-1.jpg"
+                      srcset="
+                        image/tratamento-capilar-1-1366x.jpg 1366w,
+                        image/tratamento-capilar-1-991x.jpg   991w,
+                        image/tratamento-capilar-1-767x.jpg   767w,
+                        image/tratamento-capilar-1-480x.jpg   480w
+                      "
+                      sizes="
+                        (max-width: 1366px) 615px,
+                        (max-width: 1280px) 571px,
+                        (max-width: 991px) 435px,
+                        (max-width: 767px) 322px,
+                        (max-width: 480px) 395px,
+                        883px"
                     />
                   </div>
                 </div>

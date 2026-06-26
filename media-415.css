@@ -1,0 +1,14 @@
+@media all and (max-width: 25.9375em) {
+  header {
+    &.nav-open {
+      & .nav-divider {
+        & .navegacao {
+          transform: translateY(29%);
+          align-items: center;
+          flex-flow: column;
+          display: flex;
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,6 @@
 :root {
+  --fonte-padrao: "Montserrat", sans-serif;
+  --font-title: "Playfair Display", serif;
   --cor-text: #303030;
   --cor-customized: #5e8c83;
   --cor-customized-hover: #4c7269;
@@ -90,7 +92,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--fonte-padrao);
   font-size: 1.6rem;
   line-height: 1.4;
   color: var(--cor-text);
@@ -98,8 +100,7 @@ body {
 }
 
 h1 {
-  font-family: "Playfair Display", serif;
-  /* font-size: 3.32rem; */
+  font-family: var(--font-title);
   font-size: 3.98rem;
   line-height: 1;
   font-weight: 600;
@@ -285,7 +286,7 @@ header {
   .box-social {
     display: flex;
     gap: 1.28rem;
-    font-size: 18px;
+    font-size: 1.8rem;
     /* color: var(--cor-customized); */
 
     & a {
@@ -386,7 +387,7 @@ header {
 
   & h2 {
     color: white;
-    font-family: "Playfair Display", serif;
+    font-family: var(--font-title);
     font-size: 3.98rem;
     font-weight: 400;
     margin-bottom: 1rem;
@@ -1196,11 +1197,6 @@ footer {
       flex-flow: column;
       gap: 2.5rem;
 
-      /* & > span {
-        white-space: nowrap;
-        font-weight: 700;
-      } */
-
       & .icons-contatos {
         flex-flow: column;
         gap: 2rem;
@@ -1276,7 +1272,7 @@ footer {
 }
 
 .a-contatos span {
-  white-space: nowrap;
+  text-align: center;
 }
 
 /* Inicia o icone Whatsapp após scroll */
