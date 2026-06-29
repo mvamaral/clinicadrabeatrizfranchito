@@ -41,11 +41,10 @@
   </head>
 
   <body>
-    <div id="popup-close" class="popup-injetaveis">
+    <div id="popup-1" class="popup-injetaveis">
       <div class="popup-card">
         <img
-          id="p-close"
-          class="icon-close"
+          class="p-close icon-close"
           alt="Menu Close"
           src="image/close-menu.svg"
         />
@@ -92,11 +91,10 @@
       </div>
     </div>
 
-    <div id="popup-close" class="popup-injetaveis">
+    <div id="popup-2" class="popup-injetaveis">
       <div class="popup-card">
         <img
-          id="p-close"
-          class="icon-close"
+          class="p-close icon-close"
           alt="Menu Close"
           src="image/close-menu.svg"
         />
@@ -141,11 +139,10 @@
       </div>
     </div>
 
-    <div id="popup-close" class="popup-injetaveis">
+    <div id="popup-3" class="popup-injetaveis">
       <div class="popup-card">
         <img
-          id="p-close"
-          class="icon-close"
+          class="p-close icon-close"
           alt="Menu Close"
           src="image/close-menu.svg"
         />
@@ -584,7 +581,7 @@
             </p>
 
             <div class="flex container-cards">
-              <div id="p-open" class="injetaveis-card">
+              <div data-target="popup-1" class="p-open injetaveis-card">
                 <img
                   alt="Harmonização Facial"
                   class="card-img"
@@ -622,7 +619,7 @@
                 </div>
               </div>
 
-              <div id="p-open" class="injetaveis-card">
+              <div data-target="popup-2" class="p-open injetaveis-card">
                 <img
                   alt="Toxina Botulínica"
                   class="card-img"
@@ -656,7 +653,7 @@
                 </div>
               </div>
 
-              <div id="p-open" class="injetaveis-card">
+              <div data-target="popup-3" class="p-open injetaveis-card">
                 <img
                   alt="Bioestimuladores"
                   class="card-img"
@@ -1202,7 +1199,7 @@
           <div class="flex col mapa">
             <span>R. Padre David, 272 – Centro, Assis – SP, 19800-220</span>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8523.726490513263!2d-50.4104672!3d-22.6616312!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94953947c87c9c51%3A0x9c39495ffd382c76!2sCl%C3%ADnica%20Dra%20Beatriz%20Franchito%20Dermatologia!5e0!3m2!1spt-BR!2sbr!4v1779078334702!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8523.726490513263!2d-50.4104672!3d-22.6616312!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94953947c87c9c51%3A0x9c39495ffd382c76!2sCl%C3%ADnica%20Dra%20Beatriz%20Franchito%20Dermatologia!5e1!3m2!1spt-BR!2sbr!4v1779078334702!5m2!1spt-BR!2sbr"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
@@ -1237,6 +1234,7 @@
     <script src="js/main.js" defer></script>
     <script src="js/nav-open-mobile.js" defer></script>
     <script src="js/popup-open.js" defer></script>
+    <script src="js/hidden-cards.js" defer></script>
     <script>
       document.getElementById("ano").textContent = new Date().getFullYear();
     </script>

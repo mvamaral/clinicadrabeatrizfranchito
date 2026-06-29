@@ -99,7 +99,16 @@
     }
   }
 
+  .carousel-controls {
+    transform: translateY(-190px);
+    justify-content: space-between;
+  }
+
   /* PROCEDIMENTOS INJETÁVEIS */
+  .card-text {
+    display: none;
+  }
+
   .popup-injetaveis {
     display: none;
     justify-content: center;
@@ -206,6 +215,33 @@
   /* TRATAMENTOS CAPILARES */
   .content-capilares {
     flex-flow: column;
+  }
+
+  /* TECNOLOGIAS */
+  .box-tec.is-visible {
+    & img,
+    & h2,
+    & p {
+      pointer-events: none;
+    }
+
+    & img {
+      transition: all 0.5s ease 1s;
+      filter: blur(4px);
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+
+    h2 {
+      transition-delay: 1s;
+      transform: translateY(0);
+    }
+
+    p {
+      transition-delay: 1.3s;
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   /* FOOTER */

@@ -3,7 +3,7 @@
 class Carousel {
   constructor(el) {
     this.el = el;
-    this.carouselOptions = ["previous", "play", "next"]; // "add",
+    this.carouselOptions = ["previous", "next"]; // "add","play",
     this.carouselData = [
       {
         id: "1",
