@@ -7,23 +7,23 @@ class Carousel {
     this.carouselData = [
       {
         id: "1",
-        src: "./image/recepcao-new.jpeg",
+        src: "./image/recepcao-new-low.webp",
       },
       {
         id: "2",
-        src: "./image/espera.jpeg",
+        src: "./image/espera-low.webp",
       },
       {
         id: "3",
-        src: "./image/atendimento.jpeg",
+        src: "./image/atendimento-low.webp",
       },
       {
         id: "4",
-        src: "./image/espera-2.jpeg",
+        src: "./image/espera-2-low.webp",
       },
       {
         id: "5",
-        src: "./image/plantas.jpeg",
+        src: "./image/plantas-low.webp",
       },
     ];
     this.carouselInView = [1, 2, 3, 4, 5];
@@ -57,6 +57,7 @@ class Carousel {
       carouselItem.className = `carousel-item carousel-item-${index + 1}`;
       carouselItem.src = item.src;
       carouselItem.setAttribute("loading", "lazy");
+      carouselItem.setAttribute("alt", "Clinica Ambiente");
       // Used to keep track of carousel items, infinite items possible in carousel however min 5 items required
       carouselItem.setAttribute("data-index", `${index + 1}`);
     });

@@ -691,12 +691,11 @@ header {
   box-shadow: inset 0 4px 12px rgba(43, 43, 43, 0.1);
   padding: 6.1rem 3.9rem;
   padding-bottom: 9.54rem;
-  background-image: url("image/doutora-background.webp");
-  background-position: 50%;
-  background-size: contain;
+  position: relative;
+  background-image: url("image/logo-transparente.png");
+  background-size: 50rem;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
 
   & .container-dra-beatriz {
     justify-content: center;
@@ -724,6 +723,24 @@ header {
 
     & .space-div {
       flex: 2;
+
+      & .img-dra-beatriz {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 26.875em) {
+  .section-dra-beatriz {
+    & .content-dra-beatriz {
+      & .space-div {
+        & .img-dra-beatriz {
+          width: 130%;
+        }
+      }
     }
   }
 }
@@ -961,7 +978,7 @@ header {
 }
 
 .img-tratamento {
-  max-height: 36rem;
+  /* max-height: 36rem; */
   min-width: 100%;
 
   & img {

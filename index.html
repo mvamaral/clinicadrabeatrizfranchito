@@ -13,7 +13,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <link href="https://fonts.googleapis.com/css2?" rel="stylesheet" />
 
@@ -534,19 +539,38 @@
                 <p>
                   Dra. Beatriz Franchito iniciou sua jornada na área em 2006, no
                   Hospital de Base de São José do Rio Preto. Em 2009, tornou-se
-                  membro titular da Sociedade Brasileira de Dermatologia atuando
-                  desde então. Com formação ou cursos especificos anos, atende
-                  com um enfoque humanizado, valorizando o diagnóstico preciso e
-                  individualizado.
+                  membro titular da Sociedade Brasileira de Dermatologia,
+                  atuando desde então com excelência.
                 </p>
-                <ul>
-                  <li>Formação em Dermatologia Clínica</li>
-                  <li>Dermatologia Estética</li>
-                  <li>Dermatologia Cirúrgica</li>
-                </ul>
+                <p>
+                  Dessa trajetória, consolidou uma prática que combina solidez
+                  acadêmica e diversas especializações com um olhar
+                  profundamente humanizado.
+                </p>
+                <p>
+                  Em sua prática clínica, valoriza o diagnóstico preciso e
+                  individualizado, oferecendo tratamentos eficazes que
+                  equilibram tecnologia de ponta com uma sensibilidade atenta às
+                  particularidades e ao bem-estar de cada paciente.
+                </p>
               </div>
 
-              <div class="space-div"></div>
+              <div class="space-div">
+                <picture>
+                  <source
+                    srcset="image/doutora-perfil-mobile.png"
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="img-dra-beatriz"
+                    alt="Cirurgia Dermatológica"
+                    loading="lazy"
+                    src="image/doutora-background-sem.png"
+                  />
+                  <!-- srcset="image/cirurgia-767x.webp 767w"
+                sizes="(max-width: 767px) 335px" -->
+                </picture>
+              </div>
             </div>
           </div>
         </div>
@@ -801,6 +825,16 @@
                   A mesoterapia capilar consiste na aplicação de ativos
                   diretamente no couro cabeludo, estimulando os folículos e
                   fortalecendo os fios.
+                </p>
+              </div>
+
+              <div class="procedimentos-card">
+                <h4>PRP - Plasma Rico em Plaquetas</h4>
+                <p>
+                  É um tratamento regenerativo que utiliza o próprio sangue do
+                  paciente para estimular a recuperação dos tecidos e favorecer
+                  o crescimento dos cabelos, melhorarando a espessura e a
+                  qualidade dos fios.
                 </p>
               </div>
 
