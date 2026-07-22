@@ -738,6 +738,7 @@ header {
     & .content-dra-beatriz {
       & .space-div {
         & .img-dra-beatriz {
+          position: absolute;
           width: 130%;
         }
       }
