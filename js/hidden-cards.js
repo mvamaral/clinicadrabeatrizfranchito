@@ -14,6 +14,9 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Seleciona todos os seus cards
-const cards = document.querySelectorAll(".box-tec");
-cards.forEach((card) => observer.observe(card));
+// Seleciona os cards
+const cardsProcedimento = document.querySelectorAll(".procedimentos-card");
+cardsProcedimento.forEach((card) => observer.observe(card));
+
+const cardsTec = document.querySelectorAll(".box-tec");
+cardsTec.forEach((card) => observer.observe(card));

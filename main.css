@@ -159,7 +159,8 @@ svg {
 .section {
   display: flex;
   justify-content: center;
-  scroll-margin-top: 10rem; /* SAIR DO MAIN */
+  scroll-margin-top: 10rem;
+  /* SAIR DO MAIN */
 }
 
 .container {
@@ -189,7 +190,8 @@ svg {
 }
 
 h2 {
-  letter-spacing: 0.15rem; /* SAIR DO MAIN */
+  letter-spacing: 0.15rem;
+  /* SAIR DO MAIN */
   z-index: 9;
   color: var(--cor-customized);
 }
@@ -204,14 +206,23 @@ h2 {
   &.underline {
     text-decoration: none;
     display: inline-block;
-    background-image: linear-gradient(
-      var(--cor-customized),
-      var(--cor-customized)
-    );
+    background-image: linear-gradient(var(--cor-customized),
+        var(--cor-customized));
     background-position: bottom left;
     background-size: 100% 0.5rem;
     background-repeat: no-repeat;
   }
+}
+
+.hidden-s {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.show-s {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .popup-injetaveis {
@@ -296,6 +307,7 @@ header {
       display: flex;
       justify-content: center;
     }
+
     & svg {
       width: 2.5rem;
       transition: all ease-in 300ms;
@@ -363,12 +375,10 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.2) 50%,
-      rgba(0, 0, 0, 0.4) 100%
-    );
+    background: linear-gradient(to top,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.4) 100%);
     z-index: 2;
   }
 
@@ -690,9 +700,9 @@ header {
 .section-dra-beatriz {
   box-shadow: inset 0 4px 12px rgba(43, 43, 43, 0.1);
   padding: 6.1rem 3.9rem;
-  padding-bottom: 9.54rem;
+  /* padding-bottom: 9.54rem; */
   position: relative;
-  background-image: url("image/logo-transparente.png");
+  /* background-image: url("image/logo-transparente.png"); */
   background-size: 50rem;
   background-repeat: no-repeat;
   background-position: center;
@@ -709,11 +719,13 @@ header {
   }
 
   & .content-dra-beatriz {
-    & .text-dra-beatriz {
-      flex: 2;
+    gap: 2.5rem;
 
+    & .text-dra-beatriz {
       display: flex;
       flex-flow: column;
+      justify-content: space-between;
+      flex: 2;
       gap: 2.5rem;
 
       & ul {
@@ -728,6 +740,7 @@ header {
         object-fit: cover;
         width: 100%;
         height: 100%;
+        border-radius: var(--top-right-bottom-left);
       }
     }
   }
@@ -750,6 +763,7 @@ header {
 .section-procedimentos {
   padding: 6.1rem 0;
   padding-bottom: 0;
+
   & .container-injetaveis,
   & .container-capilares {
     justify-content: center;
@@ -778,6 +792,7 @@ header {
 
 .title-procedimentos {
   justify-content: center;
+
   & h2 {
     text-transform: uppercase;
     font-weight: 500;
@@ -1012,6 +1027,7 @@ header {
   &.left {
     left: 1rem;
   }
+
   &.right {
     right: 1rem;
   }
@@ -1209,6 +1225,7 @@ footer {
     & img {
       width: 100%;
     }
+
     & span {
       white-space: nowrap;
       text-align: center;
@@ -1220,7 +1237,7 @@ footer {
     gap: 3.12rem;
 
     & .box-contatos {
-      font-size:;
+      font-size: ;
       flex-flow: column;
       gap: 2.5rem;
 
@@ -1271,6 +1288,7 @@ footer {
   background-color: #3a564f;
   color: rgba(255, 255, 255, 0.7);
   padding: 1.5rem;
+
   & p {
     font-size: 1.6rem;
   }

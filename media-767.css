@@ -104,6 +104,22 @@
     justify-content: space-between;
   }
 
+  /* PROCEDIMENTOS */
+  .procedimentos-card.is-visible {
+    transition: all 0.5s ease 0.5s;
+    pointer-events: none;
+    transition-delay: 0.5s;
+    border-left-color: #7e5217;
+    border-right-color: transparent;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+    & h4 {
+      transition-delay: 0.5s;
+      color: #7e5217;
+    }
+  }
+
   /* PROCEDIMENTOS INJETÁVEIS */
   .card-text {
     display: none;
@@ -138,11 +154,9 @@
       height: 100%;
       max-height: fit-content;
       background: #f4f9f8;
-      background: linear-gradient(
-        180deg,
-        rgba(244, 249, 248, 1) 50%,
-        rgba(134, 184, 169, 1) 70%
-      );
+      background: linear-gradient(180deg,
+          rgba(244, 249, 248, 1) 50%,
+          rgba(134, 184, 169, 1) 70%);
 
       & .icon-close {
         top: 5px;
@@ -219,6 +233,7 @@
 
   /* TECNOLOGIAS */
   .box-tec.is-visible {
+
     & img,
     & h2,
     & p {
@@ -243,6 +258,7 @@
       opacity: 1;
     }
   }
+
 
   /* FOOTER */
   footer {

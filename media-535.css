@@ -1,4 +1,11 @@
 @media all and (max-width: 33.437em) {
+
+  .section-dra-beatriz {
+    & .content-dra-beatriz {
+      flex-flow: column;
+    }
+  }
+
   .container-cards {
     align-items: center;
     flex-flow: column;
