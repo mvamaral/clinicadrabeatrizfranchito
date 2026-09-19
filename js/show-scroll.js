@@ -11,5 +11,5 @@ const observerScroll = new IntersectionObserver((entries) => {
   threshold: 0.15 //15% do elemento visível na tela
 });
 
-const hiddenElements = document.querySelectorAll('hidden-s');
+const hiddenElements = document.querySelectorAll('.hidden-s');
 hiddenElements.forEach((element) => observerScroll.observe(element));
